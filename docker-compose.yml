@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: .
+      args:
+        INSTALL_DEV: ${INSTALL_DEV-false}
+    restart: always
+    networks:
+      - default
+    ports:
+      - "1337:1337"
+    platform: linux/amd64 # Patch for M1 Mac
