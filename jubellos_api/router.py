@@ -37,7 +37,7 @@ def play_scratch_ticket(scratchticket: PostPlayScratchTicket) -> GetPlayScratchT
 
     scratch_ticket.state = ScratchTicketState.PLAYED
 
-    return GetPlayScratchTicket(image="hehe", prize=scratch_ticket.prize) # noqa
+    return GetPlayScratchTicket(image="https://dummyimage.com/600x600/861a21/fff.jpg?text=Gewonnen", prize=scratch_ticket.prize) # noqa
 
 
 @router.get("/scratchTickets/{id}", dependencies=[Depends(get_authorization_header)])
